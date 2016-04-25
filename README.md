@@ -8,6 +8,8 @@ create diff patch current config and rpm original config
 $ ./rpmdiff.sh ${package_name}
 ```
 
+## Example
+
 ```console
 $ ./rpmdiff.sh openssh-server
 openssh-server-6.6.1p1-23.el7_2.x86_64
@@ -104,13 +106,18 @@ exiting because "Download Only" specified
  #ShowPatchLevel no
  #UseDNS yes
  #PidFile /var/run/sshd.pid
+$ # We got .patch file !!
 $ ls patches/
-httpd.patch
 openssh-server.patch
 ``` 
 
-## Require
+## Requires
 
 - yum
 - sudo (and sudoer privilege)
 - pygmentize(optional)
+
+## TODO
+
+- remove rpm catch file
+- bash completion for package names
