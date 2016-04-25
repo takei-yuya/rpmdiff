@@ -104,6 +104,9 @@ exiting because "Download Only" specified
  #ShowPatchLevel no
  #UseDNS yes
  #PidFile /var/run/sshd.pid
+$ ls patches/
+httpd.patch
+openssh-server.patch
 ``` 
 
 ## Require
