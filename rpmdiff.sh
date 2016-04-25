@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if which pygmentize >/dev/null 2>&1; then
-FILTER="pygmentize -f terminal -ldiff"
+FILTER="pygmentize -f terminal -l diff"
 else
 FILTER="cat"
 fi
