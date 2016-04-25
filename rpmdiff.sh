@@ -25,7 +25,7 @@ fi
 
 # make diff
 mkdir -p patches
-sudo rpm -V ""${pkg} | sed 's/.........\s*c\s*//' | while read -d $'\n' file; do
+sudo rpm -V ""${pkg} | sed 's/.........\s*c\s*//p;d' | while read -d $'\n' file; do
 	rpm2cpio "${rpm_path}" | cpio --quiet -i -E <(echo ".${file}") --to-stdout | sudo diff -u --label "${file}" - "${file}";
 done | tee patches/${pkg}.patch | ${FILTER}
 }
